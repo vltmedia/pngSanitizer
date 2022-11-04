@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser(formatter_class = argparse.RawDescriptionHelpFo
  
 parser.add_argument("-i", "--input", metavar="INPUT", help = "Path to your images")
 args = vars(parser.parse_args())
-if args['input'] is not None:
+if args['input'] is None:
     args['input'] = os.path.dirname(__file__)
 files = glob.glob(args['input'] + "/*.png")
 
